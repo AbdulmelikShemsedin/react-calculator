@@ -16,9 +16,10 @@ const Calculator = () => {
 
     const handleInputChange = (num) => {
         setInputNum((c) => c + num)
+        setResult(num)
     }
 
-    const handleOperatorChange = (op) => {
+    const handleOperatorChange = () => {
         setResult(eval(removeLeadingZeros(inputNum)))
     }
 
@@ -68,10 +69,10 @@ const Calculator = () => {
                 </div>
                 <div className="col-xs-3">
                     <div className="operators">
-                        <button id="divide" className="operator" onClick={() => {handleOperatorChange('/'), handleInputChange('/')}}>/</button>
-                        <button id="multiply" className="operator" onClick={() => {handleOperatorChange('*'), handleInputChange('*')}}>x</button>
-                        <button id="subtract" className="operator" onClick={() => {handleOperatorChange('-'), handleInputChange('-')}}>-</button>
-                        <button id="add" className="operator" onClick={() => {handleOperatorChange('+'), handleInputChange('+')}}>+</button>
+                        <button id="divide" className="operator" onClick={() => {handleInputChange('/'), handleOperatorChange()}}>/</button>
+                        <button id="multiply" className="operator" onClick={() => {handleInputChange('*'), handleOperatorChange()}}>x</button>
+                        <button id="subtract" className="operator" onClick={() => {handleInputChange('-'), handleOperatorChange()}}>-</button>
+                        <button id="add" className="operator" onClick={() => {handleInputChange('+'), handleOperatorChange()}}>+</button>
                         <button id="equals" onClick={() => calculateResult()}>=</button>
                     </div>
                 </div>
