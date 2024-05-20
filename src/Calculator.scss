@@ -11,8 +11,12 @@
   font-size: 50px;
   text-align: end;
 
+  :first-child {
+    margin-top: 25px;
+  }
+
   :nth-child(2) {
-    margin-top: 50px;
+    margin-top: 40px;
     font-size: 100px;
   }
 }
@@ -33,6 +37,7 @@
 
   .expertise button {
     background-color: hsl(0, 0%, 65%);
+    text-align: center;
   }
 
   .number, .point {
